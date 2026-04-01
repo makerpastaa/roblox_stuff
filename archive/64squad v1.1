@@ -1,0 +1,119 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))() 
+ 
+local Window = OrionLib:MakeWindow({Name = "Kay's CS:GO Modded V1.1", HidePremium = true, SaveConfig = false, ConfigFolder = "OrionTest"}) 
+ 
+local Tab = Window:MakeTab({ 
+ Name = "Server", 
+ Icon = "rbxassetid://14916455451", 
+ PremiumOnly = false 
+}) 
+ 
+local Section = Tab:AddSection({ 
+ Name = "SERVER CRASHING / This may not work if another event is already running" 
+}) 
+ 
+Tab:AddButton({ 
+ Name = "Server crash (TTT)", 
+ Callback = function() 
+        game:GetService("ReplicatedStorage").Events.TeleportSetting:FireServer('TTT') 
+   end     
+}) 
+ 
+local Section = Tab:AddSection({ 
+ Name = "Trolling" 
+}) 
+ 
+Tab:AddButton({ 
+ Name = "Spam 1 (won't get banned / no filter)", 
+ Callback = function() 
+       local hate = {"SERVER DESTROYED BY 64SQUAD: https://discord.gg/VD3XFdArzT- "}       
+       
+while true do       
+    task.wait(0.1)       
+    game.ReplicatedStorage.Events:WaitForChild("PlayerChatted"):FireServer(hate[math.random(1,#hate)], nil, "Innocent", false, false, false)       
+end  
+   end     
+}) 
+ 
+Tab:AddButton({ 
+ Name = "Spam 2 (same as spam 1, but different phrases)", 
+ Callback = function() 
+        local hate = {'lil niggas getting bullied', '64squad fucked your mother', '50 elo noobs got hacked!!', 'wanna cry?', 'suck my dick, bitch', 'fucked your mother 5mins ago...', 'you: OH NO WHERE SERVER AND FPS???', 'who hero? me hero', 'ohh, why you crying?', 'suck my balls', 'pissed 0iq niggas'}    
+    
+while true do    
+    task.wait(.1)    
+    game.ReplicatedStorage.Events:WaitForChild("PlayerChatted"):FireServer(hate[math.random(1,#hate)], nil, "Innocent", false, false, false) 
+end 
+   end     
+}) 
+ 
+Tab:AddButton({ 
+ Name = "Loud AK47 sounds (may break the chat!)", 
+ Callback = function() 
+       game:GetService("RunService").Heartbeat:Connect(function() 
+    for _, Player in game:GetService("Players"):GetChildren() do 
+        game:GetService("ReplicatedStorage").Events.Whizz:FireServer(Player, game:GetService("ReplicatedStorage").Weapons.AK47) 
+    end 
+end)  
+   end     
+}) 
+ 
+local Section = Tab:AddSection({ 
+ Name = "All events" 
+}) 
+ 
+Tab:AddButton({ 
+ Name = "TTT (crashing server)", 
+ Callback = function() 
+        game:GetService("ReplicatedStorage").Events.TeleportSetting:FireServer('TTT') 
+   end     
+}) 
+ 
+Tab:AddButton({ 
+ Name = "juggernaut (fun)", 
+ Callback = function() 
+        game:GetService("ReplicatedStorage").Events.TeleportSetting:FireServer('juggernaut') 
+   end     
+}) 
+ 
+Tab:AddButton({ 
+ Name = "VIP (useless event, can protect from crashing)", 
+ Callback = function() 
+        game:GetService("ReplicatedStorage").Events.TeleportSetting:FireServer('VIPevent') 
+   end     
+}) 
+ 
+Tab:AddButton({ 
+ Name = "deathmatch (dont work rn)", 
+ Callback = function() 
+        game:GetService("ReplicatedStorage").Events.TeleportSetting:FireServer('deathmatch') 
+   end     
+}) 
+ 
+local Section = Tab:AddSection({ 
+ Name = "more features coming soon..." 
+}) 
+ 
+local Tab = Window:MakeTab({ 
+ Name = "Credits", 
+ Icon = "rbxassetid://18449541318", 
+ PremiumOnly = false 
+}) 
+ 
+local Section = Tab:AddSection({ 
+ Name = "HTTPS://DISCORD.GG/VD3XFdArzT-" 
+}) 
+ 
+local Section = Tab:AddSection({ 
+ Name = "MADE BY @SSW0RD64 FOR 64SQUAD" 
+}) 
+ 
+local Section = Tab:AddSection({ 
+ Name = "SCRIPT MAKER (CRASHING, TROLLING) - makerpasta" 
+}) 
+ 
+local Section = Tab:AddSection({ 
+ Name = "more features coming soon..." 
+}) 
+ 
+OrionLib:Init()
