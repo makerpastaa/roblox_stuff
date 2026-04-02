@@ -120,7 +120,6 @@ local function removeEsp(player)
     local esp = cache[player]
     if not esp then return end
 
-    -- Удаляем основные drawing объекты
     local drawingObjects = {
         "tracer", "boxOutline", "box", "name", "healthOutline", "health", "distance"
     }
@@ -132,7 +131,6 @@ local function removeEsp(player)
         end
     end
 
-    -- Удаляем box lines
     if esp.boxLines then
         for _, line in ipairs(esp.boxLines) do
             if line and line.Remove then
@@ -142,7 +140,6 @@ local function removeEsp(player)
         esp.boxLines = {}
     end
 
-    -- Удаляем skeleton lines
     if esp.skeletonlines then
         for _, lineData in ipairs(esp.skeletonlines) do
             local skeletonLine = lineData
@@ -380,7 +377,6 @@ local function updateEsp()
                         esp.tracer.Visible = false
                     end
                 else
-                    -- Игрок не на экране, скрываем все элементы
                     esp.box.Visible = false
                     esp.boxOutline.Visible = false
                     esp.name.Visible = false
@@ -398,7 +394,6 @@ local function updateEsp()
                     end
                 end
             else
-                -- Нет персонажа или не прошел проверки, скрываем все элементы
                 esp.box.Visible = false
                 esp.boxOutline.Visible = false
                 esp.name.Visible = false
@@ -416,7 +411,6 @@ local function updateEsp()
                 end
             end
         else
-            -- Нет персонажа или не прошел проверку команды, скрываем все элементы
             esp.box.Visible = false
             esp.boxOutline.Visible = false
             esp.name.Visible = false
