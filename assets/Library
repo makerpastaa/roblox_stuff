@@ -72,13 +72,13 @@ table.insert(Library.Signals, RenderStepped:Connect(function(Delta)
     end
 end))
 
-local function Getfps()
-    return math.floor(1 / RunService.RenderStepped:wait())
-end
+-- local function Getfps()
+--     return math.floor(1 / RunService.RenderStepped:wait())
+-- end
 
-loacl function getcurrenttime()
-    retunr os.date("%d/%m")
-end
+-- loacl function getcurrenttime()
+--     retunr os.date("%d/%m")
+-- end
 
 local function GetPlayersString()
     local PlayerList = Players:GetPlayers();
