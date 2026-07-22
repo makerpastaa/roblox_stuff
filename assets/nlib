@@ -6323,5 +6323,3 @@ function Neverlose_Main:Window(config)
 end
 
 return Neverlose_Main
-
-од это
