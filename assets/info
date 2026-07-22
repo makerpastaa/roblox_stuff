@@ -1,0 +1,22 @@
+local BuildInfo = {
+    Version = "1.0",
+    Build = "22/07/2026",
+    BuildType = "DEV",
+    News = "nothing"
+}
+
+function BuildInfo:VersionType()
+    return self.Version
+end
+
+function BuildInfo:GetBuild()
+    return self.Build
+end
+
+function BuildInfo:BuildType()
+    return self.BuildType
+end
+
+function BuildInfo:GetNews()
+    return self.News
+end
