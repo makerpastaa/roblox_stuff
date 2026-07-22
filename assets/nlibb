@@ -77,7 +77,7 @@ function Neverlose_Main:PlaySound(SoundID)
     sound:Play()
 end
 
-local BuildInfo = loadstring(game:HttpGet("https://raw.githubusercontent.com/makerpastaa/roblox_stuff/refs/heads/main/assets/info"))()
+--local BuildInfo = loadstring(game:HttpGet("https://raw.githubusercontent.com/makerpastaa/roblox_stuff/refs/heads/main/assets/info"))()
 
 local function MakeDraggable(topbarobject, object)
     local Dragging = nil
@@ -1493,80 +1493,80 @@ function Neverlose_Main:Window(config)
     SettingsVersionHolderLayout.SortOrder = Enum.SortOrder.LayoutOrder
     SettingsVersionHolderLayout.Padding = UDim.new(0, 8)
     
-   VersionText.Name = "VersionText"
-VersionText.Parent = SettingsVersionHolder
-VersionText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-VersionText.BackgroundTransparency = 1.000
-VersionText.BorderColor3 = Color3.fromRGB(0, 0, 0)
-VersionText.BorderSizePixel = 0
-VersionText.Position = UDim2.new(0.0666666701, 0, 0.12350598, 0)
-VersionText.Size = UDim2.new(0, 35, 0, 18)
-VersionText.Font = Enum.Font.GothamBold
-VersionText.Text = "Version: <font color='rgb(9, 174, 255)'>"..tostring(BuildInfo:VersionType()).."</font>"
-VersionText.TextColor3 = Color3.fromRGB(255, 255, 255)
-VersionText.TextSize = 14.000
-VersionText.TextXAlignment = Enum.TextXAlignment.Left
-VersionText.RichText = true
+    VersionText.Name = "VersionText"
+    VersionText.Parent = SettingsVersionHolder
+    VersionText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    VersionText.BackgroundTransparency = 1.000
+    VersionText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    VersionText.BorderSizePixel = 0
+    VersionText.Position = UDim2.new(0.0666666701, 0, 0.12350598, 0)
+    VersionText.Size = UDim2.new(0, 35, 0, 18)
+    VersionText.Font = Enum.Font.GothamBold
+    VersionText.Text = "Version: 1337"
+    VersionText.TextColor3 = Color3.fromRGB(255, 255, 255)
+    VersionText.TextSize = 14.000
+    VersionText.TextXAlignment = Enum.TextXAlignment.Left
+    VersionText.RichText = true
+    
+    BuildDateText.Name = "BuildDateText"
+    BuildDateText.Parent = SettingsVersionHolder
+    BuildDateText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    BuildDateText.BackgroundTransparency = 1.000
+    BuildDateText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    BuildDateText.BorderSizePixel = 0
+    BuildDateText.Position = UDim2.new(0.0666666701, 0, 0.12350598, 0)
+    BuildDateText.Size = UDim2.new(0, 35, 0, 18)
+    BuildDateText.Font = Enum.Font.GothamBold
+    BuildDateText.Text = "Build date: 7/22/2026"
+    BuildDateText.TextColor3 = Color3.fromRGB(255, 255, 255)
+    BuildDateText.TextSize = 14.000
+    BuildDateText.TextXAlignment = Enum.TextXAlignment.Left
+    BuildDateText.RichText = true
+    
+    BuildTypeText.Name = "BuildTypeText"
+    BuildTypeText.Parent = SettingsVersionHolder
+    BuildTypeText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    BuildTypeText.BackgroundTransparency = 1.000
+    BuildTypeText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    BuildTypeText.BorderSizePixel = 0
+    BuildTypeText.Position = UDim2.new(0.0666666701, 0, 0.12350598, 0)
+    BuildTypeText.Size = UDim2.new(0, 35, 0, 18)
+    BuildTypeText.Font = Enum.Font.GothamBold
+    BuildTypeText.Text = "Build type: DEV"
+    BuildTypeText.TextColor3 = Color3.fromRGB(255, 255, 255)
+    BuildTypeText.TextSize = 14.000
+    BuildTypeText.TextXAlignment = Enum.TextXAlignment.Left
+    BuildTypeText.RichText = true
+    
+    RegisteredText.Name = "RegisteredText"
+    RegisteredText.Parent = SettingsVersionHolder
+    RegisteredText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    RegisteredText.BackgroundTransparency = 1.000
+    RegisteredText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    RegisteredText.BorderSizePixel = 0
+    RegisteredText.Position = UDim2.new(0.0666666701, 0, 0.12350598, 0)
+    RegisteredText.Size = UDim2.new(0, 35, 0, 18)
+    RegisteredText.Font = Enum.Font.GothamBold
+    RegisteredText.Text = "Registered to: <font color='rgb(9, 174, 255)'>"..Player.Name.."</font>"
+    RegisteredText.TextColor3 = Color3.fromRGB(255, 255, 255)
+    RegisteredText.TextSize = 14.000
+    RegisteredText.TextXAlignment = Enum.TextXAlignment.Left
+    RegisteredText.RichText = true
 
-BuildDateText.Name = "BuildDateText"
-BuildDateText.Parent = SettingsVersionHolder
-BuildDateText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BuildDateText.BackgroundTransparency = 1.000
-BuildDateText.BorderColor3 = Color3.fromRGB(0, 0, 0)
-BuildDateText.BorderSizePixel = 0
-BuildDateText.Position = UDim2.new(0.0666666701, 0, 0.12350598, 0)
-BuildDateText.Size = UDim2.new(0, 35, 0, 18)
-BuildDateText.Font = Enum.Font.GothamBold
-BuildDateText.Text = "Build date: <font color='rgb(9, 174, 255)'>"..tostring(BuildInfo:GetBuild()).."</font>"
-BuildDateText.TextColor3 = Color3.fromRGB(255, 255, 255)
-BuildDateText.TextSize = 14.000
-BuildDateText.TextXAlignment = Enum.TextXAlignment.Left
-BuildDateText.RichText = true
-
-BuildTypeText.Name = "BuildTypeText"
-BuildTypeText.Parent = SettingsVersionHolder
-BuildTypeText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BuildTypeText.BackgroundTransparency = 1.000
-BuildTypeText.BorderColor3 = Color3.fromRGB(0, 0, 0)
-BuildTypeText.BorderSizePixel = 0
-BuildTypeText.Position = UDim2.new(0.0666666701, 0, 0.12350598, 0)
-BuildTypeText.Size = UDim2.new(0, 35, 0, 18)
-BuildTypeText.Font = Enum.Font.GothamBold
-BuildTypeText.Text = "Build type: <font color='rgb(9, 174, 255)'>"..tostring(BuildInfo:BuildType()).."</font>"
-BuildTypeText.TextColor3 = Color3.fromRGB(255, 255, 255)
-BuildTypeText.TextSize = 14.000
-BuildTypeText.TextXAlignment = Enum.TextXAlignment.Left
-BuildTypeText.RichText = true
-
-RegisteredText.Name = "RegisteredText"
-RegisteredText.Parent = SettingsVersionHolder
-RegisteredText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RegisteredText.BackgroundTransparency = 1.000
-RegisteredText.BorderColor3 = Color3.fromRGB(0, 0, 0)
-RegisteredText.BorderSizePixel = 0
-RegisteredText.Position = UDim2.new(0.0666666701, 0, 0.12350598, 0)
-RegisteredText.Size = UDim2.new(0, 35, 0, 18)
-RegisteredText.Font = Enum.Font.GothamBold
-RegisteredText.Text = "Registered to: <font color='rgb(9, 174, 255)'>"..tostring(Player.Name).."</font>"
-RegisteredText.TextColor3 = Color3.fromRGB(255, 255, 255)
-RegisteredText.TextSize = 14.000
-RegisteredText.TextXAlignment = Enum.TextXAlignment.Left
-RegisteredText.RichText = true
-
-NewsText.Name = "NewsText"
-NewsText.Parent = SettingsVersionHolder
-NewsText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-NewsText.BackgroundTransparency = 1.000
-NewsText.BorderColor3 = Color3.fromRGB(0, 0, 0)
-NewsText.BorderSizePixel = 0
-NewsText.Position = UDim2.new(0, 0, 0.649999976, 0)
-NewsText.Size = UDim2.new(0, 92, 0, 18)
-NewsText.Font = Enum.Font.GothamBold
-NewsText.Text = "Latest News: <font color='rgb(9, 174, 255)'>"..tostring(BuildInfo:GetNews()).."</font>"
-NewsText.TextColor3 = Color3.fromRGB(255, 255, 255)
-NewsText.TextSize = 14.000
-NewsText.TextXAlignment = Enum.TextXAlignment.Left
-NewsText.RichText = true
+    NewsText.Name = "NewsText"
+    NewsText.Parent = SettingsVersionHolder
+    NewsText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    NewsText.BackgroundTransparency = 1.000
+    NewsText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    NewsText.BorderSizePixel = 0
+    NewsText.Position = UDim2.new(0, 0, 0.649999976, 0)
+    NewsText.Size = UDim2.new(0, 92, 0, 18)
+    NewsText.Font = Enum.Font.GothamBold
+    NewsText.Text = "Latest News: nothing"
+    NewsText.TextColor3 = Color3.fromRGB(255, 255, 255)
+    NewsText.TextSize = 14.000
+    NewsText.TextXAlignment = Enum.TextXAlignment.Left
+    NewsText.RichText = true
     
     SettingsLine2.Name = "SettingsLine2"
     SettingsLine2.Parent = SettingsFrame
